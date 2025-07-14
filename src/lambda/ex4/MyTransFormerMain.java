@@ -15,7 +15,5 @@ public class MyTransFormerMain {
         MyTransFormer composeFunc = compose(f1, f2);
 
         System.out.println(composeFunc.apply("hello"));
-
-        ArrayList<>();
     }
 }
