@@ -6,7 +6,7 @@ import java.util.function.Function;
 
 public class GenericMap {
 
-    static <T, R> List<R> map (List<T> list, Function<T, R> function) {
+    public static <T, R> List<R> map(List<T> list, Function<T, R> function) {
         List<R> resultList = new ArrayList<>();
         for (T t : list) {
             resultList.add(function.apply(t));
