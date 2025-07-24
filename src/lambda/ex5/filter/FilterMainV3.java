@@ -1,0 +1,17 @@
+package lambda.ex5.filter;
+
+import java.util.List;
+
+import static lambda.ex5.filter.IntegerFilter.filter;
+
+public class FilterMainV3 {
+    public static void main(String[] args) {
+        List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+        List<Integer> evenNumbers = filter(numbers, a -> a % 2 == 0);
+        System.out.println("evenNumbers = " + evenNumbers);
+
+        List<Integer> oddNumbers = filter(numbers, a -> a % 2 == 1);
+        System.out.println("oddNumbers = " + oddNumbers);
+    }
+}
