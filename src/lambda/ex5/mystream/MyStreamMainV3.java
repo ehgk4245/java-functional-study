@@ -11,12 +11,10 @@ public class MyStreamMainV3 {
                 new Student("grape", 60)
         );
 
-        List<String> list = MyStreamV3.of(students)
+        MyStreamV3.of(students)
                 .filter(student -> student.getScore() >= 80)
-                .map(s -> s.getName())
-                .toList();
-
-        System.out.println(list);
+                .map(Student::getName)
+                .forEach(System.out::println);
 
         List<String> list1 = MyStreamV3.of(students)
                 .filter(student -> student.getName().length() == 5 && student.getScore() >= 80)
